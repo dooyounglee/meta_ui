@@ -221,7 +221,7 @@ const SecondRoutes = () => {
 		{/* 사이트관리자 암호 바꾸기 기능 추가 2023.04.15(토) 김일국 */}
 		<Route path={URL.ADMIN_MANAGER} element={<EgovAdminPasswordUpdate />} />
       </Routes>
-      <EgovFooter />
+      {/* <EgovFooter /> */}
       <EgovInfoPopup />
       
     </>

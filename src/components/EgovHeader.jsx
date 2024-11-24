@@ -60,11 +60,14 @@ function EgovHeader({ loginUser, onChangeLogin }) {
         <div className="header">
             <div className="inner">
                 <Link to={URL.MAIN} className="ico lnk_go_template" target="_blank">홈페이지 템플릿 소개 페이지로 이동</Link>
-
-                <h1 className="logo">
+                
+                <div className="info">
+                    <p className="copy">Copyright © 2021 Ministry Of The Interior And Safety. All Rights Reserved.</p>
+                </div>
+                {/* <h1 className="logo">
                     <Link to={URL.MAIN} className="w"><img src="/assets/images/logo_w.png" alt="표준프레임워크포털 eGovFrame 심플홈페이지" /></Link>
                     <Link to={URL.MAIN} className="m"><img src="/assets/images/logo_m.png" alt="표준프레임워크포털 eGovFrame 심플홈페이지" /></Link>
-                </h1>
+                </h1> */}
 
                 <div className="gnb">
                     <h2 className="blind">주메뉴</h2>
@@ -96,10 +99,10 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                 {/* <!--// PC web에서 보여지는 영역 --> */}
 
                 {/* <!-- right area --> */}
-                <div className="right_a">
+                {/* <div className="right_a">
                     <button type="button" className="btn btnAllMenu" title="전체메뉴 닫힘">전체메뉴</button>
                     <button type="button" className="btn mobile btnAllMenuM" title="전체메뉴 닫힘">전체메뉴</button>
-                </div>
+                </div> */}
             </div>
 
             {/* <!-- All menu : web --> */}
