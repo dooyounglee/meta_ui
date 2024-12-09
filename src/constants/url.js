@@ -74,6 +74,29 @@ const URL = {
     ADMIN_GALLERY_REPLY         : "/admin/gallery/reply", // 사이트관리/사이트갤러리관리 답글 등록
     
 	ADMIN_MANAGER               : "/admin/manager/", // 사이트관리/사이트관리자 암호변경 기능 추가 2023.04.15(토) 김일국
+
+    //예시 SAMPLE
+    SAMPLE                      : "/sam", // 예시
+    SAMPLE_CREATE1              : "/sam/create1", // 등록화면1
+    SAMPLE_CREATE2              : "/sam/create2", // 등록화면2
+    SAMPLE_CREATE3              : "/sam/create3", // 등록화면3
+    SAMPLE_CREATE4              : "/sam/create4", // 등록화면3
+    SAMPLE_CREATE5              : "/sam/create5", // 등록화면3
+    SAMPLE_MODAL1               : "/sam/modal1", // 등록화면3
+    SAMPLE_POPUP1               : "/sam/popup1", // 등록화면3
+    SAMPLE_POPUP1_P             : "/sam/popup1P", // 등록화면3
+    SAMPLE_POPUP1_P3            : "/sam/popup1P3", // 등록화면3
+    SAMPLE_POPUP1_P5            : "/sam/popup1P5", // 등록화면3
+    SAMPLE_LIST1                : "/sam/list1", // 등록화면3
+    SAMPLE_BUTTON1              : "/sam/button1", // 등록화면3
+    SAMPLE_FILEUPLOAD1          : "/sam/fileupload1", // 등록화면3
+    SAMPLE_FILEUPLOAD2          : "/sam/fileupload2", // 등록화면3
+    SAMPLE_FILEUPLOAD3          : "/sam/fileupload3", // 등록화면3
+    SAMPLE_EXCEL1               : "/sam/excel1", // 등록화면3
+    SAMPLE_SEARCHCND1           : "/sam/searchcnd1", // 등록화면3
+    SAMPLE_SEARCHCND2           : "/sam/searchcnd2", // 등록화면3
+    SAMPLE_SEARCHCND3           : "/sam/searchcnd3", // 등록화면3
+    SAMPLE_EDITOR1              : "/sam/editor1", // 등록화면3
 }
 
 export default URL;
