@@ -1,0 +1,14 @@
+/* layout */
+.modal {display: block;}
+.modal::before {content: ""; display: block; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 998;}
+.modal .pop_header {position: relative; height: 94px; padding: 42px 100px 0 40px; border-bottom: 1px solid #dde2e5; border-radius: 19px 19px 0 0; background: #fff;}
+.modal .pop_header h1 {color: #222; font-size: 24px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.modal .pop_header .close {position: absolute; right: 40px; top: 40px; width: 30px; height: 30px; font-size: 0; background: url(css/images/ico_close_black44.png) no-repeat; background-size: contain;}
+.modal .pop_container {padding: 40px; border-radius: 0 0 19px 19px; background: #fff;}
+
+/* page */
+.modal .pop_inner {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 999;}
+.modal .pop_container .img {margin-top: 20px;}
+.modal .pop_container .img img {max-width: 100%;}
+.modal .pop_container .btn_area {margin-top: 30px; text-align: center;}
+.modal .pop_container .btn_area .btn + .btn {margin-left: 10px;}
