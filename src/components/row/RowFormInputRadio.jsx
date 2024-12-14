@@ -18,7 +18,7 @@ function RowFormInputRadio({ type,
             <dt><label htmlFor={id}>{title}</label>{required && <span className="req">필수</span>}</dt>
             <dd>
                 {options.map((radioOption, i) => {
-                    const checked = value === checkedValue;
+                    const checked = radioOption.value === checkedValue;
                     const toggledClassName = checked ? "f_rdo on" : "f_rdo"
                     return (
                         <label className={toggledClassName} key={i}>
@@ -27,6 +27,7 @@ function RowFormInputRadio({ type,
                                 name={name}
                                 value={radioOption.value}
                                 title={radioOption.label}
+                                ref={el => checked && (ref.current[name] = el)}
                                 checked={checked}
                                 onChange={onChange || ((e) => {
                                     ref.current[name] = e.target
