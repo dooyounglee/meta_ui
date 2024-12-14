@@ -22,9 +22,6 @@ function RowFormTextarea({ type,
                     cols={cols} rows={rows}
                     ref={el => ref.current && (ref.current[name] = el)}
                     defaultValue={defaultValue}
-                    onChange={onChange || ((e) => {
-                        ref.current[name].value = e.target.value;
-                    })}
                     readOnly={!!readOnly}
                     disabled={!!disabled}
                 />

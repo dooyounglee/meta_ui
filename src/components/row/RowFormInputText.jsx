@@ -21,9 +21,6 @@ function RowFormInputText({ type,
                     name={name} placeholder={placeholder}
                     defaultValue={defaultValue}
                     ref={el => ref.current && (ref.current[name] = el)}
-                    onChange={onChange || ((e) => {
-                        ref.current[name].value = e.target.value;
-                    })}
                     readOnly={!!readOnly}
                     disabled={!!disabled}
                     required={!!required}
