@@ -1,3 +1,5 @@
+var scrollX = 0;
+var scrollY = 0;
 
 export default function initPage() {
 
@@ -89,6 +91,33 @@ export default function initPage() {
         //      el.parentElement.classList[el.checked ? 'add' : 'remove']('on');
         //     }
         // });
+
+        document.addEventListener('click', (e) => {
+                const el = e.target;
+                // Checkbox
+                if (el.matches('.f_chk input')) {
+                        el.parentElement.classList[el.checked ? 'add' : 'remove']('on');
+                }
+                // Radio
+                else if (el.matches('label.f_rdo')) {
+                        for (var x of el.parentElement.children) x.classList['remove']('on');
+                        el.classList['add']('on');
+                        scrollX = window.scrollX;
+                        scrollY = window.scrollY;
+                }
+               else if (el.matches('em')) {
+                        var el_ = el.parentElement
+                        if (el_.matches("label.f_rdo")) {
+                                for (var x of el_.parentElement.children) x.classList['remove']('on');
+                                el_.classList['add']('on');
+                                scrollX = window.scrollX;
+                                scrollY = window.scrollY;
+                        }
+               }
+               else if (el.matches('input[type="radio"]')) {
+                        window.scrollTo(scrollX,scrollY)
+               }
+        });
         // 홈페이지 템플릿 소개팝업
         const template = {
             init: function() {
