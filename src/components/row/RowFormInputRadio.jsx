@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
 
-function RowFormInputText({ type,
+function RowFormInputRadio({ type,
         title, id, name, placeholder,
         defaultValue, value, onChange,
-        list, // radio, checkbox, select
+        list, options, // radio, checkbox, select
         checkedValue, checked, // radio, checkbox
         rows, cols, // textarea
         mode, height, // editor
@@ -15,37 +15,32 @@ function RowFormInputText({ type,
     }, ref) {
     return (
         <dl>
-            <dt><label>{title}</label>{required && <span className="req">필수</span>}</dt>
+            <dt><label htmlFor={id}>{title}</label>{required && <span className="req">필수</span>}</dt>
             <dd>
-                {list.map((item, i) => {
-                    const checked = item.value === (ref.current[name]?.value || checkedValue);
+                {options.map((radioOption, i) => {
+                    const checked = value === checkedValue;
                     const toggledClassName = checked ? "f_rdo on" : "f_rdo"
                     return (
                         <label className={toggledClassName} key={i}>
-                            <input
+                            <input key={i}
                                 type="radio"
                                 name={name}
-                                value={item.value}
-                                title={item.label}
+                                value={radioOption.value}
+                                title={radioOption.label}
                                 checked={checked}
-                                ref={el => checked && (ref.current[name] = el)}
-                                onClick={onChange || (e => {
-                                    ref.current[name] = e.target;
-                                    // setRadioValue(e.target.value)
+                                onChange={onChange || ((e) => {
+                                    ref.current[name] = e.target
                                 })}
-                                onChange={e => {
-                                    ref.current[name] = e.target;
-                                }}
                                 readOnly={readOnly}
                                 disabled={disabled}
-                                required={required}
                             />
-                            <em>{item.label}</em>
-                        </label>)
+                            <em>{radioOption.label}</em>
+                        </label>
+                    )
                 })}
             </dd>
         </dl>
     )
 }
 
-export default forwardRef(RowFormInputText);
+export default forwardRef(RowFormInputRadio);
