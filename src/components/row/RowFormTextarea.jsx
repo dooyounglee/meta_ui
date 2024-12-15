@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
 
+import * as util from 'js/utils';
+
 function RowFormTextarea({ type,
         title, id, name, placeholder,
         defaultValue, value, onChange,
@@ -13,6 +15,10 @@ function RowFormTextarea({ type,
         readOnly, disabled, required,
         onKeyDown
     }, ref) {
+
+        // 필수값 세팅
+        util.Validate.setRequired(required, ref, title, name);
+        
     return (
         <dl>
             <dt><label>{title}</label>{required && <span className="req">필수</span>}</dt>
