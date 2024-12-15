@@ -21,13 +21,6 @@ function RowFormCalenderFromTo({ type,
         const [calender, setCalender] = useState({ startDate: startDate === undefined ? new Date() : util.Date.format(startDate, "YYYYMMDD"),
             endDate: endDate === undefined ? new Date() : util.Date.format(endDate, "YYYYMMDD") });
         
-        if (!ref.current[keyStartDate]) ref.current[keyStartDate] = {};
-        if (!ref.current[keyEndDate]) ref.current[keyEndDate] = {};
-        if (startDate && endDate) {
-            ref.current[keyStartDate].value = startDate
-            ref.current[keyEndDate].value = endDate
-        }
-        
         // 필수값 세팅
         util.Validate.setRequired(required, ref, title + "_시작일자", keyStartDate);
         util.Validate.setRequired(required, ref, title + "_종료일자", keyEndDate);
@@ -48,7 +41,7 @@ function RowFormCalenderFromTo({ type,
                     selected={calender.startDate}
                     onChange={onChange !== undefined ? (dates => onChange(dates)) :
                             (dates => {
-                            const [start, end] = dates;console.log(dates)
+                            const [start, end] = dates;
                             // console.log(util.Date.format(start, "YYYYMMDD"))
                             // console.log(util.Date.format(end, "YYYYMMDD"))
                             try {
@@ -61,8 +54,6 @@ function RowFormCalenderFromTo({ type,
                                     // setCalender({ ...calender, endDate: end })
                                     ref.current[keyEndDate].value=util.Date.format(end, "YYYYMMDD");
                                 }
-                                console.log(ref.current[keyStartDate]);
-                                console.log(ref.current[keyEndDate]);
                                 setCalender({ ...calender, startDate: start, endDate: end })
                                 handlerChange(dates);
                             } catch (e) {

@@ -20,11 +20,6 @@ function RowFormCalender({ type,
 
         const [calender, setCalender] = useState({ startDate: startDate === undefined ? new Date() : util.Date.format(startDate, "YYYYMMDD") });
         
-        if (!ref.current[keyStartDate]) ref.current[keyStartDate] = {};
-        if (startDate) {
-            ref.current[keyStartDate].value = startDate
-        }
-        
         // 필수값 세팅
         util.Validate.setRequired(required, ref, title, keyStartDate);
         

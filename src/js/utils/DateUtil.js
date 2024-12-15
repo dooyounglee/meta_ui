@@ -12,7 +12,6 @@ export const format = (str, f) => {
     if (!isDate(str)) {
         date = toDate(str);
     }
-    console.log(date)
     if (!isDate(date)) {
         Message.alert("SYS-031"); return;
     }
