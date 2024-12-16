@@ -1,0 +1,124 @@
+ /* 드래그 앤 드롭 */
+ .div_images {
+    font-size: 1em;
+    color:#0f3c4b;
+    box-shadow: 0 0 5px #cccccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+}
+
+
+.child_dp_none * {
+    display: none;
+}
+
+
+.input_label {
+    cursor: pointer;
+}
+
+.input_label:hover{
+    color: #39bfd3;
+}
+
+.is-dragover
+{
+    outline-offset: -20px;
+    z-index: 10;
+    background: url(../css/images/file_download.png) no-repeat center center rgb(203,220,225);
+    background-size: 80px;
+}
+
+.is-dragover *{
+    display: none;
+}
+
+
+.div_images * {
+    border: none;
+}
+
+.div_preview {
+    flex-direction: row;
+    /* justify-content: center; */
+    padding: 10px;
+}
+
+/* 이미지 프리뷰 */
+/* .div_preview>img {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+} */
+
+/* pdf 이미지 클릭 */
+/* .div_preview>div {
+    cursor: pointer;
+} */
+
+/* pdf 이미지 프리뷰 */
+/* .div_preview>div>embed {
+    height: 100px;
+    width: 100px;
+    display: block;
+    z-index: -1;
+    position: relative;
+} */
+
+/* 이미지 삭제 버튼 */
+.div_preview+button {
+    border: none;
+    color: white;
+    background-color: rgb(223, 71, 71);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.div_preview+button:hover {
+    animation: outline 1s ease;
+}
+
+#input_file {
+    display: none;
+}
+
+/* 이미지 업로드 버튼 */
+/* #input_file+label {
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+} */
+
+/* #input_file+label:hover {
+    background-color: #cccccc;
+    color: white;
+} */
+
+@keyframes outline {
+    from {
+        outline: #e4e4e4 solid;
+        outline-offset: 10px;
+        transform: scale(1)
+    }
+
+    to {
+        outline: transparent solid;
+        outline-offset: 0px;
+        transform: scale(1.05);
+        box-shadow: 0 2px 10px #e4e4e4;
+    }
+}

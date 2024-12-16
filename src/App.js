@@ -7,6 +7,7 @@ import './css/component.css';
 import './css/page.css';
 import './css/response.css';
 import './css/modal.css';
+import './css/drag_drop.css';
 
 function App() {
 
