@@ -170,7 +170,7 @@
 .condition > ul,
 .condition > ul li {display: inline-block; vertical-align: top;}
 .condition > ul li + li {margin-left: 20px;}
-.condition > ul + ul {margin-left: 20px;}
+.condition > ul + ul {margin-left: 20px; margin-top: 20px;}
 .condition > ul .prev {display: inline-block; width: 46px; height: 46px; border: 1px solid #dde2e5; border-radius: 5px; background: #fff url(css/images/ico_prev.png) no-repeat center;}
 .condition > ul .next {display: inline-block; width: 46px; height: 46px; border: 1px solid #dde2e5; border-radius: 5px; background: #fff url(css/images/ico_prev.png) no-repeat center; transform: rotate(180deg);}
 .condition > ul li .prev + span {display: inline-block; height: 46px; margin: 0 10px; padding: 0 30px; border-radius: 5px; font-size: 16px; line-height: 46px; background: #f7f7f7; vertical-align: top;}
@@ -272,3 +272,15 @@ select::-ms-expand {display:none;}
 
 /* 리액트 관련 */
 .react-datepicker__tab-loop {display: inline-block;}
+
+/* 버튼 */
+.btn_blue_h46 {height: 46px; border-radius: 5px; color: #fff; font-size: 16px; line-height: 46px; text-align: center; background: #169bd5;}
+.btn_skyblue_h46 {height: 46px; border-radius: 5px; color: #005b82; font-size: 16px; line-height: 46px; text-align: center; background: #daedf5;}
+.btn_primary_h46 {height: 46px; border-radius: 5px; color: #fff; font-size: 16px; line-height: 46px; text-align: center; background: #007bff;}
+.btn_secondary_h46 {height: 46px; border-radius: 5px; color: #fff; font-size: 16px; line-height: 46px; text-align: center; background:#6c757d;}
+.btn_success_h46 {height: 46px; border-radius: 5px; color: #005b82; font-size: 16px; line-height: 46px; text-align: center; background: #daedf5;}
+.btn_danger_h46 {height: 46px; border-radius: 5px; color: #005b82; font-size: 16px; line-height: 46px; text-align: center; background: #daedf5;}
+.btn_warning_h46 {height: 46px; border-radius: 5px; color: #005b82; font-size: 16px; line-height: 46px; text-align: center; background: #daedf5;}
+.btn_info_h46 {height: 46px; border-radius: 5px; color: #fff; font-size: 16px; line-height: 46px; text-align: center; background: #17a2b8;}
+.btn_light_h46 {height: 46px; border-radius: 5px; color: #212529; font-size: 16px; line-height: 46px; text-align: center; background: #f8f9fa;}
+.btn_dark_h46 {height: 46px; border-radius: 5px; color: #fff; font-size: 16px; line-height: 46px; text-align: center; background: #343a40;}
