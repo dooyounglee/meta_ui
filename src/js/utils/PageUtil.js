@@ -1,0 +1,2 @@
+export const itemIdxByPageAcsending = (resultCnt, currentPageNo, pageSize, index) => ((currentPageNo - 1) * pageSize + index + 1);
+export const itemIdxByPage = (resultCnt, currentPageNo, pageSize, index) => resultCnt + 1 - itemIdxByPageAcsending(resultCnt, currentPageNo, pageSize, index);
