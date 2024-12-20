@@ -34,7 +34,7 @@ const RowFormFileDragDrop = ({ type,
     
         // 다운로드
         function onClickDownFile(atchFileId, fileSn) {
-            window.open(SERVER_URL + "/api" + "/cmm/file/download?atchFileId=" + atchFileId + "&fileSn=" + fileSn + "", "hiddenframe");
+            window.open(SERVER_URL + "/cmm/file/download?atchFileId=" + atchFileId + "&fileSn=" + fileSn + "", "hiddenframe");
         }
     
         function onClickDeleteFile(atchFileId, fileSn, fileIndex) {
