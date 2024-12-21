@@ -10,9 +10,9 @@ const InputText = ({ name, title, width
             <span className={`f_search ${width}`}>
                 <input type="text"
                     ref={el => {
-                        el.value = defaultValue || "";
                         ref.current[name] = el;
                     }}
+                    defaultValue={defaultValue}
                     onChange={e => {
                         ref.current[name].value = e.target.value; 
                     }}
@@ -20,7 +20,7 @@ const InputText = ({ name, title, width
                     disabled={disabled}
                 />
                 <button type="button" onClick={onSearch}>조회</button>
-                </span>
+            </span>
         </li>
     );
 }
