@@ -32,6 +32,12 @@ export function requestFetch(url, requestOptions, handler, errorHandler) {
     requestOptions = { ...requestOptions, origin: window.location.host };
   }
 
+  // GET요청이면, requestOptions.body를 url로 옮김
+  if (requestOptions.method === "GET" && requestOptions.body) {
+    url += "?" + new URLSearchParams(JSON.parse(requestOptions.body)).toString();
+    delete requestOptions.body;
+  }
+
   // 토큰 있을경우 넣어주기
   util.Auth.setTokenRequest(requestOptions);
   util.Auth.setRefreshTokenRequest(requestOptions);
