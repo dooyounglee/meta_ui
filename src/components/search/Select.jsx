@@ -6,7 +6,7 @@ const Select = ({ name, title
 
     return (
         <li className="third_1 L">
-            <span className="lb">{title}</span>
+            {title && (<span className="lb">{title}</span>)}
             <label className="f_select w_150" htmlFor="sel1">
                 <select
                     ref={el => {

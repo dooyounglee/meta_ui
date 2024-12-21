@@ -6,7 +6,7 @@ const InputText = ({ name, title, width
     
     return (
         <li className="third_2 R">
-            <span className="lb">{title}</span>
+            {title && (<span className="lb">{title}</span>)}
             <span className={`f_search ${width}`}>
                 <input type="text"
                     ref={el => {
