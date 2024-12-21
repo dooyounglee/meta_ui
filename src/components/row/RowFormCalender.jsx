@@ -25,9 +25,7 @@ function RowFormCalender({ type,
         
         useEffect(() => {
             ref.current[keyStartDate] = {};
-            if (startDate) {
-                ref.current[keyStartDate].value = startDate
-            }
+            ref.current[keyStartDate].value = startDate | util.Date.format(calender.startDate,"YYYYMMDD");
         }, []);
     return (
         <dl>
