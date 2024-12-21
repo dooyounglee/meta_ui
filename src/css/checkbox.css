@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.pms_chk {padding: 8px 0px;}
+.pms_chk em {display: inline-block; height: 30px; margin-left: 40px; color: #666; font-size: 16px;}
+
+/* .f_chk {display: inline-block; position: relative; min-width: 30px; height: 30px; border: 0; line-height: 30px; background: url(./images/bg_form_chk.png) no-repeat; vertical-align: top;}
+.f_chk input {position: absolute; opacity: 0;} */
+
+.chk {display: inline-block;}
+.f_chk {display: inline-block; position: relative; min-width: 30px; height: 30px; border: 0; line-height: 30px; background: url(./images/bg_form_chk.png) no-repeat; vertical-align: top;}
+.f_chk input {position: absolute; opacity: 0;}
+.f_chk.on {background: url(./images/bg_form_chk_on.png) no-repeat;}
+.f_chk em {display: inline-block; height: 30px; color: #222; font-size: 16px; font-weight: 300; line-height: 30px; vertical-align: top; margin-left: 40px;}
+.f_chk + .f_chk {margin-left: 30px;}

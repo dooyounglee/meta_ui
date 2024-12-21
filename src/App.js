@@ -8,6 +8,7 @@ import './css/page.css';
 // import './css/response.css';
 import './css/modal.css';
 import './css/drag_drop.css';
+import './css/checkbox.css';
 
 function App() {
 
