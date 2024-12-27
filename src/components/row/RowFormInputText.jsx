@@ -19,14 +19,29 @@ function RowFormInputText({ type,
         // 필수값 세팅
         util.Validate.setRequired(required, ref, title, name);
 
-    return (
+    return ref ? (
         <dl>
             <dt><label>{title}</label>{required && <span className="req">필수</span>}</dt>
             <dd>
                 <input className="f_input2 w_full" type="text"
                     name={name} placeholder={placeholder}
                     defaultValue={defaultValue}
-                    ref={el => ref.current && (ref.current[name] = el)}
+                    ref={el => ref && ref.current && (ref.current[name] = el)}
+                    readOnly={!!readOnly}
+                    disabled={!!disabled}
+                    required={!!required}
+                    autoComplete='off'
+                />
+            </dd>
+        </dl>
+    ) : (
+        <dl>
+            <dt><label>{title}</label>{required && <span className="req">필수</span>}</dt>
+            <dd>
+                <input className="f_input2 w_full" type="text"
+                    name={name} placeholder={placeholder}
+                    value={value}
+                    onChange={onChange}
                     readOnly={!!readOnly}
                     disabled={!!disabled}
                     required={!!required}
