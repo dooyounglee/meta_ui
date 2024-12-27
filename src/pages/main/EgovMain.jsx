@@ -31,7 +31,7 @@ function EgovMain(props) {
             body: JSON.stringify()
         }
 
-        EgovNet.requestFetch(retrieveListURL,
+        /*EgovNet.requestFetch(retrieveListURL,
             requestOptions,
             (resp) => {
 
@@ -87,7 +87,7 @@ function EgovMain(props) {
             function (resp) {
                 console.log("err response : ", resp);
             }
-        );
+        );*/
         console.groupEnd("EgovMain.retrieveList()");
     },[]);
 
