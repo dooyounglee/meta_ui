@@ -14,7 +14,7 @@ const Left = ({ menus }) =>{
 
     useEffect(() => {
         if (pathname !== "/") {
-            const _menu = menus.find(m => m.menuPath === pathname && m.menuLevel === 2);
+            const _menu = menus.find(m => m.menuPath === pathname && (m.menuLevel === 2 || m.menuLevel === ""));
             setMenu(_menu);
             setLeftMenu(
                 menus
