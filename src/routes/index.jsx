@@ -83,6 +83,8 @@ import SampleFileUpload2 from 'pages/sample/SampleFileUpload2';
 import SampleExcel1 from 'pages/sample/SampleExcel1';
 import SampleSearchCnd1 from 'pages/sample/SampleSearchCnd1';
 import SampleEditor1 from 'pages/sample/SampleEditor1';
+import SampleCrud1 from 'pages/sample/SampleCrud1';
+import SampleCrud1c from 'pages/sample/SampleCrud1c';
 
 // import * as EgovNet from 'api/egovFetch'; // jwt토큰 위조 검사 때문에 추가
 import initPage from 'js/ui';
@@ -258,6 +260,8 @@ const SecondRoutes = () => {
               <Route path={URL.SAMPLE_EXCEL1} element={<SampleExcel1 />} />
               <Route path={URL.SAMPLE_SEARCHCND1} element={<SampleSearchCnd1 />} />
               <Route path={URL.SAMPLE_EDITOR1} element={<SampleEditor1 />} />
+              <Route path={URL.SAMPLE_CRUD1} element={<SampleCrud1 />} />
+              <Route path={URL.SAMPLE_CRUD1C} element={<SampleCrud1c />} />
             </Routes>
           </div>
         </div>

@@ -88,6 +88,8 @@ const URL = {
     SAMPLE_EXCEL1               : "/sam/excel1", // 등록화면3
     SAMPLE_SEARCHCND1           : "/sam/searchcnd1", // 등록화면1
     SAMPLE_EDITOR1              : "/sam/editor1", // 등록화면3
+    SAMPLE_CRUD1                : "/sam/crud1", // CRUD화면1
+    SAMPLE_CRUD1C               : "/sam/crud1c", // CRUD화면1c
 }
 
 export default URL;
