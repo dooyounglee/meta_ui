@@ -71,6 +71,12 @@ export const cutByLength = (s, l) => {
     }
 }
 
+export const loadSearchCondition = (ref, o) => {
+    for (var x in ref.current) {
+        if (o && o[x]) ref.current[x].value = o[x];
+    }
+}
+
 export const menu1 = () => {
     return [
         {
@@ -300,15 +306,17 @@ export const menu1 = () => {
 }
 
 export const menu2 = [
-    { topMenuName: "Sample", menuPath: "/sam",             menuLevel: 1, menuGroup: "sam", menuOrder: 9,  menuName: "Sample", },
-    { topMenuName: "Sample", menuPath: "/sam/create1",     menuLevel: 2, menuGroup: "sam", menuOrder: 1,  menuName: "Create1" },
-    { topMenuName: "Sample", menuPath: "/sam/modal1",      menuLevel: 2, menuGroup: "sam", menuOrder: 6,  menuName: "Modal1"  },
-    { topMenuName: "Sample", menuPath: "/sam/popup1",      menuLevel: 2, menuGroup: "sam", menuOrder: 7,  menuName: "Popup1"  },
-    { topMenuName: "Sample", menuPath: "/sam/list1",       menuLevel: 2, menuGroup: "sam", menuOrder: 8,  menuName: "List1"   },
-    { topMenuName: "Sample", menuPath: "/sam/button1",     menuLevel: 2, menuGroup: "sam", menuOrder: 9,  menuName: "Button1" },
-    { topMenuName: "Sample", menuPath: "/sam/fileupload1", menuLevel: 2, menuGroup: "sam", menuOrder: 11, menuName: "File1"   },
-    { topMenuName: "Sample", menuPath: "/sam/fileupload2", menuLevel: 2, menuGroup: "sam", menuOrder: 13, menuName: "File2"   },
-    { topMenuName: "Sample", menuPath: "/sam/excel1",      menuLevel: 2, menuGroup: "sam", menuOrder: 14, menuName: "Excel1"  },
-    { topMenuName: "Sample", menuPath: "/sam/searchcnd1",  menuLevel: 2, menuGroup: "sam", menuOrder: 15, menuName: "Search1" },
-    { topMenuName: "Sample", menuPath: "/sam/editor1",     menuLevel: 2, menuGroup: "sam", menuOrder: 16, menuName: "Editor1" },
+    { topMenuName: "Sample", menuPath: "/sam",             menuLevel: 1,   menuGroup: "sam", menuOrder: 9,  menuName: "Sample", },
+    { topMenuName: "Sample", menuPath: "/sam/create1",     menuLevel: 2,   menuGroup: "sam", menuOrder: 1,  menuName: "Create1" },
+    { topMenuName: "Sample", menuPath: "/sam/modal1",      menuLevel: 2,   menuGroup: "sam", menuOrder: 6,  menuName: "Modal1"  },
+    { topMenuName: "Sample", menuPath: "/sam/popup1",      menuLevel: 2,   menuGroup: "sam", menuOrder: 7,  menuName: "Popup1"  },
+    { topMenuName: "Sample", menuPath: "/sam/list1",       menuLevel: 2,   menuGroup: "sam", menuOrder: 8,  menuName: "List1"   },
+    { topMenuName: "Sample", menuPath: "/sam/button1",     menuLevel: 2,   menuGroup: "sam", menuOrder: 9,  menuName: "Button1" },
+    { topMenuName: "Sample", menuPath: "/sam/fileupload1", menuLevel: 2,   menuGroup: "sam", menuOrder: 11, menuName: "File1"   },
+    { topMenuName: "Sample", menuPath: "/sam/fileupload2", menuLevel: 2,   menuGroup: "sam", menuOrder: 13, menuName: "File2"   },
+    { topMenuName: "Sample", menuPath: "/sam/excel1",      menuLevel: 2,   menuGroup: "sam", menuOrder: 14, menuName: "Excel1"  },
+    { topMenuName: "Sample", menuPath: "/sam/searchcnd1",  menuLevel: 2,   menuGroup: "sam", menuOrder: 15, menuName: "Search1" },
+    { topMenuName: "Sample", menuPath: "/sam/editor1",     menuLevel: 2,   menuGroup: "sam", menuOrder: 16, menuName: "Editor1" },
+    { topMenuName: "Sample", menuPath: "/sam/crud1",       menuLevel: 2,   menuGroup: "sam", menuOrder: 17, menuName: "CRUD1"   },
+    { topMenuName: "Sample", menuPath: "/sam/crud1c",      menuLevel: "", menuGroup: "sam", menuOrder: 18, menuName: "CRUD1C"  },
 ];
